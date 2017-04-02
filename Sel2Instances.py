@@ -1,4 +1,5 @@
 import c4d
+#Super simple script, will create instances of each selected object and dump them at the top of the object manager.
 
 def main():
     doc = c4d.documents.GetActiveDocument() 
