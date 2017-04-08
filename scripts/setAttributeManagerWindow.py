@@ -1,6 +1,25 @@
 import c4d
 
-op = c4d.documents.GetActiveDocument() 
+op = c4d.documents.GetActiveDocument() #op needs to be relative to mode you are trying to set, e.g:
+#    #obj
+#    obj = op
+#    c4d.gui.ActiveObjectManager_SetObject(c4d.ACTIVEOBJECTMODE_OBJECT, obj, c4d.ACTIVEOBJECTMANAGER_SETOBJECTS_OPEN)
+#    
+#    #tag
+#    tag = op.GetTags()[0]
+#    c4d.gui.ActiveObjectManager_SetObject(c4d.ACTIVEOBJECTMODE_TAG, tag, c4d.ACTIVEOBJECTMANAGER_SETOBJECTS_OPEN)
+#    
+#    #mat
+#    mat = doc.GetActiveMaterial()
+#    c4d.gui.ActiveObjectManager_SetObject(c4d.ACTIVEOBJECTMODE_MATERIAL, mat, c4d.ACTIVEOBJECTMANAGER_SETOBJECTS_OPEN)
+#
+#    #shader
+#    sha = mat.GetFirstShader()
+#    c4d.gui.ActiveObjectManager_SetObject(c4d.ACTIVEOBJECTMODE_SHADER, sha, c4d.ACTIVEOBJECTMANAGER_SETOBJECTS_OPEN)
+#    
+#    #tool
+#    tool = c4d.plugins.FindPlugin(doc.GetAction(), c4d.PLUGINTYPE_TOOL)
+#    c4d.gui.ActiveObjectManager_SetObject(c4d.ACTIVEOBJECTMODE_TOOL, tool, c4d.ACTIVEOBJECTMANAGER_SETOBJECTS_OPEN)
 
 def main():
     c4d.gui.ActiveObjectManager_SetObject(c4d.ACTIVEOBJECTMODE_SHADER, op, c4d.ACTIVEOBJECTMANAGER_SETOBJECTS_OPEN)
