@@ -23,3 +23,5 @@ def main():
 
 if __name__=='__main__':
     main()
+
+#thanks to gr4ph0s via http://plugincafe.com/forum/forum_posts.asp?TID=13525
