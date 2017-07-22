@@ -1,0 +1,9 @@
+# This python tag provides a quick and dirty way to link all parameters from a target to the tag's owner
+# define the target object to link from via the user data in the python tag.
+
+# Please be careful when using this tag, it is crude.
+# It can be made safer.
+
+# It should work with most objects.
+# It is largely untested!
+
