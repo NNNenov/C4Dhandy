@@ -1,5 +1,16 @@
 import c4d
 
+#This script allows you to quickly and easily rotate the currently selected object in 90 degree steps, 
+#by holding 1, 2 or 3 (X,Y,Z axis) then pressing the assigned hotkey.
+
+#It is best used as a hotkey, not a button.
+#For example, lets assume the script is mapped to the ` key
+#to rotate 90 degrees along the X axis, hold down 1 then press `
+#you can pick your own modifier keys to use instead of 1,2,3, check the code below in def Main()
+
+#alternatively, the script can be broken down into 3 seperate scripts, if you would like to reverse the modifier functionality,
+#so that you would hold down the same modifier key and press another to turn along that axis, this approach seemed less practical.
+
 def checkPressed(k):
     # Check any one key
     bc = c4d.BaseContainer()
