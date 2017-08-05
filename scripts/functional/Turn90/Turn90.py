@@ -1,6 +1,6 @@
 import c4d
 
-#This script allows you to quickly and easily rotate the currently selected object in 90 degree steps, 
+#This script allows you to quickly and easily rotate the currently selected object(s(local axis)) in 90 degree steps, 
 #by holding 1, 2 or 3 (X,Y,Z axis) then pressing the assigned hotkey.
 
 #It is best used as a hotkey, not a button.
