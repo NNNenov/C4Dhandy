@@ -11,6 +11,7 @@ import c4d
 #alternatively, the script can be broken down into 3 seperate scripts, if you would like to reverse the modifier functionality,
 #so that you would hold down the same modifier key and press another to turn along that axis, this approach seemed less practical.
 
+
 def checkPressed(k):
     # Check any one key
     bc = c4d.BaseContainer()
@@ -40,19 +41,21 @@ def rotat(obj, r):
 
 def main():
 
-  obj=doc.GetActiveObject()
+  #obj = doc.GetActiveObject()
+  objs = doc.GetActiveObjects(0)
   
-  if obj is None:
+  if len(objs) == 0:
         pass
-		
-  if checkPressed(ord('1')):
-    rotat(obj, "x")
-	
-  elif checkPressed(ord('2')):
-    rotat(obj, "y")
-	
-  elif checkPressed(ord('3')):
-    rotat(obj, "z")
+
+  for obj in objs:
+      if checkPressed(ord('1')):
+        rotat(obj, "x")
+    	
+      elif checkPressed(ord('2')):
+        rotat(obj, "y")
+    	
+      elif checkPressed(ord('3')):
+        rotat(obj, "z")
     
   c4d.EventAdd()
   
