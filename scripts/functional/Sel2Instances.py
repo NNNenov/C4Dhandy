@@ -4,6 +4,7 @@ import c4d
 def main():
     doc = c4d.documents.GetActiveDocument() 
     selected = doc.GetActiveObjects(0)
+    doc.StartUndo()
     
     if len(selected) > 0: 
         for ob in reversed(selected):
@@ -11,9 +12,10 @@ def main():
             op[c4d.INSTANCEOBJECT_LINK] = ob
             op.InsertBefore(doc.GetFirstObject())
             op.SetName("%s instance" % ob.GetName()) #change the name of the new instance to the name of the original object + " instance"
-            
+            doc.AddUndo(c4d.UNDOTYPE_NEW, op)
             print "made %s instance" % ob.GetName() 
             
+    doc.EndUndo()        
     c4d.EventAdd() 
     
 if __name__ == "__main__":
