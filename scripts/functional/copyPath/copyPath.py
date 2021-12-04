@@ -16,4 +16,4 @@ if __name__ == '__main__':
             path = path.replace("/Volumes/", "smb://" + server + "/")
 
     c4d.CopyStringToClipboard(path)
-    print "copied path to clipboard: \n", path
+    print ("copied path to clipboard: \n", path)
